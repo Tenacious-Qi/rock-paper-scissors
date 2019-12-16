@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <link rel="stylesheet" href="">
+        <link href=""> 
+        <title>Rock, Paper, Scissors. Shoot. </title>
+    </head>
+    <body>
+        
+        <script>
+
+        const rock = 0
+        const paper = 1;
+        const scissors = 2;
+
+        function computerPlay() {
+           let randomConst = Math.floor(Math.random() * 3)
+           if (randomConst === 0) {
+             return "rock";
+             
+           } else if (randomConst === 1) {
+             return "paper";
+             
+           } else {
+             return "scissors";
+           }
+        }
+        
+
+
+        function playRound(playerSelection, computerSelection) {
+            if (playerSelection === computerSelection) {
+                return ("Draw")
+            } else {
+                return ("Nope");
+            }
+        }
+      
+        let playerSelection = prompt("Rock, Paper, Scissors?")
+        const computerSelection = computerPlay()
+        console.log(playRound(playerSelection, computerSelection))
+        
+
+        </script>
+
+    </body>
+</html>

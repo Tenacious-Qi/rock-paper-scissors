@@ -1,0 +1,1 @@
+This is the repository for my Rock Paper Scissors game following The Odin Project.
