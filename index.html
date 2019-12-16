@@ -31,13 +31,13 @@
 
 
         function playRound(playerSelection, computerSelection) {
-            if (playerSelection == computerSelection) {
+            if (playerSelection.toLowerCase() == computerSelection) {
                 return ("Draw")
             } else {
                 return ("Nope");
             }
         }
-      
+        
         let playerSelection = prompt("Rock, Paper, Scissors?")
         const computerSelection = computerPlay()
         console.log(playRound(playerSelection, computerSelection))
