@@ -33,8 +33,10 @@
         function playRound(playerSelection, computerSelection) {
             if (playerSelection.toLowerCase() == computerSelection) {
                 return ("Draw")
+            } else if (playerSelection.toLowerCase() == "rock" && computerSelection == "paper") {
+                return ("You Lose! Paper covers rock.");
             } else {
-                return ("Nope");
+                return ("something else")
             }
         }
         
