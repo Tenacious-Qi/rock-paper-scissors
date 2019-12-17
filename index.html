@@ -10,7 +10,11 @@
     <body>
         
         <script>
+        
+        let playerScore = 0;
+        let computerScore = 0;
 
+        //random computer choice
 
         function computerPlay() {
 
@@ -26,6 +30,7 @@
                 return "scissors";
            }
         }
+
         
         let playerSelection = prompt("Ready? Rock, Paper, Scissors . . . ", "rock")
         const computerSelection = computerPlay()
