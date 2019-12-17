@@ -40,22 +40,22 @@
             const computerSelection = computerPlay();
                 
                 if (playerSelection == computerSelection) {
-                return ("draw")
+                return ("It's a draw, play again.")
 
             }   else if (playerSelection == "rock" && computerSelection == "paper") {
-                    return ("lose");
+                    return ("You lose! Paper covers Rock.");
             }   else if (playerSelection == "paper" && computerSelection == "rock") {
-                    return ("win");
+                    return ("You win! Paper covers Rock.");
 
             }   else if (playerSelection == "paper" && computerSelection == "scissors") {
-                    return("lose");
+                    return("You lose! Scissors cut paper.");
             }   else if (playerSelection == "scissors" && computerSelection == "paper") {
-                    return("win");
+                    return("You win! Scissors cut paper.");
 
             }   else if (playerSelection == "scissors" && computerSelection == "rock") {
-                    return("lose");
+                    return("You lose! Rock beats scissors.");
             }   else if (playerSelection == "rock" && computerSelection == "scissors") {
-                    return("win");
+                    return("You win! Rock beats scissors.");
 
             }   else {
                 return ("Please enter rock, paper, or scissors");
@@ -64,13 +64,7 @@
         }
 
         function game() {
-            let outcome = playRound();
-            if (outcome = "win") {
-                return (playerScore++);
-            } 
-            else if (outcome = "lose") {
-                return (computerScore++);
-            }
+            let outcome = playround();
             
         }
 
