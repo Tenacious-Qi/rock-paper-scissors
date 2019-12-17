@@ -11,24 +11,23 @@
         
         <script>
 
-        const rock = 0
-        const paper = 1;
-        const scissors = 2;
 
         function computerPlay() {
-           let randomConst = Math.floor(Math.random() * 3)
-           if (randomConst === 0) {
-             return "rock";
+
+            let randomChoice = Math.floor(Math.random() * 3)
+
+            if (randomChoice === 0) {
+                return "rock";
              
-           } else if (randomConst === 1) {
-             return "paper";
+           } if (randomChoice === 1) {
+                return "paper";
              
-           } else {
-             return "scissors";
+           } if (randomChoice === 2) {
+                return "scissors";
            }
         }
         
-        let playerSelection = prompt("Ready? Rock, Paper, Scissors . . . ")
+        let playerSelection = prompt("Ready? Rock, Paper, Scissors . . . ", "rock")
         const computerSelection = computerPlay()
 
         function playRound(playerSelection, computerSelection) {
