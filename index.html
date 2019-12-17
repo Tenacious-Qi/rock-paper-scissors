@@ -28,7 +28,8 @@
            }
         }
         
-
+        let playerSelection = prompt("Ready? Rock, Paper, Scissors . . . ")
+        const computerSelection = computerPlay()
 
         function playRound(playerSelection, computerSelection) {
 
@@ -65,9 +66,11 @@
             }
         }
         
-        let playerSelection = prompt("Ready? Rock, Paper, Scissors . . . shoot")
-        const computerSelection = computerPlay()
+        
+        
         console.log(playRound(playerSelection, computerSelection))
+        console.log("Player 1: " + playerSelection)
+        console.log("CPU: " + computerSelection)
         
 
         </script>
