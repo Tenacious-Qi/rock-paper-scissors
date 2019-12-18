@@ -5,18 +5,18 @@
         <meta name="viewport" content="width=device-width initial-scale=1.0">
         <link rel="stylesheet" href="">
         <link href=""> 
-        <title>Rock, Paper, Scissors. Shoot. </title>
+        <title>Rock, Paper, Scissors.</title>
     </head>
     <body>
         
         <script>
-        
+
+
         let playerScore = 0;
         let computerScore = 0;
 
-
         function computerPlay() {
-
+            
             let randomChoice = Math.floor(Math.random() * 3)
 
             if (randomChoice === 0) {
@@ -33,12 +33,13 @@
         function promptHuman () {
             return window.prompt("Rock, paper, or scissors", "rock").toLowerCase();
         }
+        
 
         function playRound() {
 
             const playerSelection = promptHuman();
-            const computerSelection = computerPlay();
-                
+            const computerSelection = computerPlay()
+
                 if (playerSelection == computerSelection) {
                 return ("It's a draw, play again.")
 
@@ -64,39 +65,33 @@
         }
 
         function game() {
-            
-            let outcome = playround();
-            
-            function playRound() {
-                
-            if (playerScore <= 4 || computerScore <= 4) {
-                playRound()
-            }
-            if (outcome == "You win! Paper covers Rock." || outcome == "You win! Scissors cut paper." || outcome == "You win! Rock beats scissors.") {
-                playerScore++;
-                
-            } else if (outcome == "You lose! Paper covers Rock." || outcome == "You lose! Scissors cut paper." || outcome == "You lose! Rock beats scissors.") {
-                computerScore++;
-                
-            }
+            playRound();
+            playRound();
+            playRound();
+            playRound();
+            playRound();
         }
 
-    }
-
+        game();
+                
         
-        
-        const playerSelection = promptHuman;
-        const computerSelection = computerPlay()
         console.log("Player 1: " + playerScore);
         console.log("CPU: " + computerScore);
-        console.log(playRound(playerSelection, computerSelection))
-        
-    
-
-
-        
+        // console.log(playRound(playerSelection, computerSelection));
+        console.log("CPU: " + computerSelection)
+        // console.log("Player 1: " + playerSelection)
 
         </script>
-
     </body>
 </html>
+
+
+<!-- let outcome = playRound();
+if (outcome == "You win! Paper covers Rock." || outcome == "You win! Scissors cut paper." || outcome == "You win! Rock beats scissors.") {
+    playerScore++;
+    return "Player 1 wins this round", playerScore;
+} else if (outcome == "You lose! Paper covers Rock." || outcome == "You lose! Scissors cut paper." || outcome == "You lose! Rock beats scissors.") {
+        computerScore++;
+        return "CPU wins this round", computerScore;
+  }
+playRound() -->
