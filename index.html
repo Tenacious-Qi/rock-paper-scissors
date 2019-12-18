@@ -36,33 +36,52 @@
         
 
         function playRound() {
-
+            
             const playerSelection = promptHuman();
             const computerSelection = computerPlay()
 
                 if (playerSelection == computerSelection) {
-                return ("It's a draw, play again.")
+                    console.log("Player: " + playerScore + " | " + "CPU: " + computerScore);
+                    return ("It's a draw");
 
             }   else if (playerSelection == "rock" && computerSelection == "paper") {
+                    computerScore++
+                    console.log("Player: " + playerScore + " | " + "CPU: " + computerScore);
                     return ("You lose! Paper covers Rock.");
+
             }   else if (playerSelection == "paper" && computerSelection == "rock") {
+                    playerScore++
+                    console.log("Player: " + playerScore + " | " + "CPU: " + computerScore);
                     return ("You win! Paper covers Rock.");
+                    
 
             }   else if (playerSelection == "paper" && computerSelection == "scissors") {
-                    return("You lose! Scissors cut paper.");
+                    computerScore++
+                    console.log("Player: " + playerScore + " | " + "CPU: " + computerScore);
+                    return("You lose! Scissors cut paper."); 
+
             }   else if (playerSelection == "scissors" && computerSelection == "paper") {
+                    playerScore++
+                    console.log(computerScore);
                     return("You win! Scissors cut paper.");
 
             }   else if (playerSelection == "scissors" && computerSelection == "rock") {
+                    computerScore++
+                    console.log("Player: " + playerScore + " | " + "CPU: " + computerScore);
                     return("You lose! Rock beats scissors.");
+
             }   else if (playerSelection == "rock" && computerSelection == "scissors") {
+                    playerScore++
+                    console.log("Player: " + playerScore + " | " + "CPU: " + computerScore);
                     return("You win! Rock beats scissors.");
 
             }   else {
                 return ("Please enter rock, paper, or scissors");
             }
-
         }
+
+        
+        
 
         function game() {
             playRound();
@@ -70,6 +89,17 @@
             playRound();
             playRound();
             playRound();
+            console.log("Final Score, Player: " + playerScore + " | " + "CPU: " + computerScore);
+            if (playerScore === computerScore) {
+                console.log("It's a tie")
+            }
+            else if (playerScore > computerScore) {
+                console.log("You win!")
+            }
+            else {
+                console.log("Sorry, you lose.")
+            }
+            
         }
 
         game();
@@ -77,7 +107,7 @@
         
         // console.log("Player 1: " + playerScore);
         // console.log("CPU: " + computerScore);
-        // console.log(playRound(playerSelection, computerSelection));
+        
         // console.log("CPU: " + computerSelection)
         // console.log("Player 1: " + playerSelection)
 
