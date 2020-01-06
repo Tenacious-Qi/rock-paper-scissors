@@ -92,34 +92,23 @@
             }
             
         }
-
-        // game() calls playRound() 5 times and logs the final result.
-
-
-        function game() {
-
-            console.log("Round 1 result: " + playRound());
-            console.log("Round 2 result: " + playRound());
-            console.log("Round 3 result: " + playRound());
-            console.log("Round 4 result: " + playRound());
-            console.log("Round 5 result: " + playRound());
-            
-            //final result
-            console.log("Final Score, Player: " + playerScore + " | " + "CPU: " + computerScore);
-
-            if (playerScore === computerScore) {
-                console.log("It's a draw")
-            }
-            else if (playerScore > computerScore) {
-                console.log("You win!")
-            }
-            else {
-                console.log("Sorry, you lose.")
-            }
-            
+        
+        for(i = 0; i < 5; i ++) {
+            console.log("Round " + (i + 1) + " result: " + playRound());
         }
 
-        game();
+        console.log("Final Score, Player: " + playerScore + " | " + "CPU: " + computerScore);
+
+        if (playerScore === computerScore) {
+            console.log("It's a draw")
+        }
+        else if (playerScore > computerScore) {
+            console.log("You win!")
+        }
+        else {
+            console.log("Sorry, you lose.")
+        }
+
 
 
         </script>
