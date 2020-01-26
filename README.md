@@ -1,1 +1,1 @@
-This is the repository for my Rock Paper Scissors game following The Odin Project.
+After completing the UI for this game, I realized that I had both learned a lot and still had a lot to learn. I gained some practice with functions, scope, and manipulating the DOM. Eventually, I would like to add an audio clip at the end of the game. I will revisit this assignment after I've gained a little more practice. 
