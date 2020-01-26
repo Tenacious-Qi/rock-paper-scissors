@@ -1,26 +1,22 @@
 let playerScore = 0;
 let computerScore = 0;
-let playerSelection, choice, result, win, score, 
-choicePlayer, choiceCPU, playAgain, scorePlayerDisplay, scoreCpuDisplay, rules, gif, gifLoss;
-
-result = document.querySelector(".result");
-win = document.querySelector(".win");
-playAgain = document.querySelector(".play-again");
-playAgain.style.display = "none";
-scorePlayerDisplay = document.querySelector(".score-player-display");
-scoreCpuDisplay = document.querySelector(".score-cpu-display");
-scoreContainer = document.querySelector(".score-container");
-rules = document.querySelector(".rules");
-rules.style.display = "none";
+let playerSelection, choice, result, win, score, choicePlayer, choiceCPU, playAgain, scorePlayerDisplay, scoreCpuDisplay, rules, gif, gifLoss;
 
 choicePlayer = document.querySelector(".choice-player");
 choiceCPU = document.querySelector(".choice-cpu");
-
+result = document.querySelector(".result");
+win = document.querySelector(".win");
+playAgain = document.querySelector(".play-again");
 gif = document.querySelector(".gif");
 gifLoss = document.querySelector(".gif-loss");
+scorePlayerDisplay = document.querySelector(".score-player-display");
+scoreCpuDisplay = document.querySelector(".score-cpu-display");
+rules = document.querySelector(".rules");
 
 gif.style.display = "none";
 gifLoss.style.display = "none";
+playAgain.style.display = "none";
+rules.style.display = "none";
 
 function computerPlay() {
     
@@ -63,7 +59,6 @@ function computerPlay() {
     });
 });
 
-
 function gameLogic() {
     if (((playerScore === 5) && (playerScore > computerScore)) || ((computerScore === 5) && (computerScore > playerScore))) {
         newGame();
@@ -74,6 +69,7 @@ function playRound() {
     
     const computerSelection = computerPlay();
     result.style.display = "block";
+    rules.style.display = "block";
     
         if (playerSelection == computerSelection) {
         result.textContent = "It's a draw.";
@@ -108,22 +104,23 @@ function playRound() {
     choiceCPU.textContent = "cpu: " + computerSelection;
     scorePlayerDisplay.textContent = "player: " + playerScore;
     scoreCpuDisplay.textContent = "cpu: " + computerScore;
-    rules.style.display = "block";
 
     if (playerScore === 5) {
-        gif.style.display = "block";
-        win.style.display = "block";
-        win.textContent = "Congratulations, you won the game!";
-        playAgain.style.display = "block";
-        
+            winDisplay();
+            gif.style.display = "block";
+            win.textContent = "Congratulations, you won the game!";
+
     }   else if (computerScore === 5) {
-        
-        gifLoss.style.display = "block";
-        win.style.display = "block";
-        win.textContent = "Sorry, you lost the game.";
-        playAgain.style.display = "block";
+            winDisplay();
+            gifLoss.style.display = "block";
+            win.textContent = "Sorry, you lost the game.";
     }
-    
+}
+
+function winDisplay() {
+    win.style.display = "block";
+    playAgain.style.display = "block";
+    result.style.display = "none";
 }
 
 function newGame() {
@@ -132,10 +129,10 @@ function newGame() {
     scorePlayerDisplay.textContent = "player: " + playerScore;
     scoreCpuDisplay.textContent = "cpu: " + computerScore;
     result.style.display = "none";
+    result.style.marginBottom = "20px";
     win.style.display = "none";
     gif.style.display = "none";
     gifLoss.style.display = "none";
-    result.style.marginBottom = "20px";
     playAgain.style.display = "none";
 }
 
