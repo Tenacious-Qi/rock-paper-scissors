@@ -71,31 +71,30 @@ function playRound() {
     result.style.display = "block";
     rules.style.display = "block";
     
-        if (playerSelection == computerSelection) {
+        if (playerSelection === computerSelection) {
         result.textContent = "It's a draw.";
         
-    }   else if (playerSelection == "rock" && computerSelection == "paper") {
+    }   else if (playerSelection === "rock" && computerSelection === "paper") {
             computerScore++
             result.textContent = "You lose the round, paper covers rock.";
             
-
-    }   else if (playerSelection == "paper" && computerSelection == "rock") {
+    }   else if (playerSelection === "paper" && computerSelection === "rock") {
             playerScore++
             result.textContent = "You win the round, paper covers rock.";
 
-    }   else if (playerSelection == "paper" && computerSelection == "scissors") {
+    }   else if (playerSelection === "paper" && computerSelection === "scissors") {
             computerScore++
             result.textContent = "You lose the round, scissors cut paper.";
 
-    }   else if (playerSelection == "scissors" && computerSelection == "paper") {
+    }   else if (playerSelection === "scissors" && computerSelection === "paper") {
             playerScore++
             result.textContent = "You win the round, scissors cut paper.";
 
-    }   else if (playerSelection == "scissors" && computerSelection == "rock") {
+    }   else if (playerSelection === "scissors" && computerSelection === "rock") {
             computerScore++
             result.textContent = "You lose the round, rock beats scissors.";
 
-    }   else if (playerSelection == "rock" && computerSelection == "scissors") {
+    }   else if (playerSelection === "rock" && computerSelection === "scissors") {
             playerScore++
             result.textContent = "You win the round, rock beats scissors.";
     } 
