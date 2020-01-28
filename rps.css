@@ -82,11 +82,14 @@ body {
 }
 
 .icon:hover {
-    transform: scale(1.2);
-    transform: translateY(-2px);
-    transform: rotate(360deg); 
+    transform: scale(1.2) rotate(360deg) translateY(-2px); 
     transition: .7s;
     box-shadow: 8px 5px 8px #7f8c8d;
+}
+
+.icon:active {
+    transform: translateY(8px);
+    transition: .1s;
 }
 
 .info-item {
